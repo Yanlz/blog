@@ -8,9 +8,22 @@
         <artifactId>blog</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>org.yanlz</groupId>
     <artifactId>blog-jooq-extra</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jooq</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jooq-meta</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jooq-codegen</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

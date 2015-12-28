@@ -6,10 +6,10 @@ package org.yanlz.blog.db;
 
 import javax.annotation.Generated;
 
-import org.yanlz.blog.db.tables.TbAccount;
-import org.yanlz.blog.db.tables.TbBlogInfo;
-import org.yanlz.blog.db.tables.TbCommentInfo;
-import org.yanlz.blog.db.tables.TbUserInfo;
+import org.yanlz.blog.db.tables.Account;
+import org.yanlz.blog.db.tables.BlogInfo;
+import org.yanlz.blog.db.tables.CommentInfo;
+import org.yanlz.blog.db.tables.UserInfo;
 
 
 /**
@@ -28,20 +28,20 @@ public class Tables {
 	/**
 	 * 用户账户表
 	 */
-	public static final TbAccount TB_ACCOUNT = org.yanlz.blog.db.tables.TbAccount.TB_ACCOUNT;
+	public static final Account TB_ACCOUNT = org.yanlz.blog.db.tables.Account.TB_ACCOUNT;
 
 	/**
 	 * 文章信息表
 	 */
-	public static final TbBlogInfo TB_BLOG_INFO = org.yanlz.blog.db.tables.TbBlogInfo.TB_BLOG_INFO;
+	public static final BlogInfo TB_BLOG_INFO = org.yanlz.blog.db.tables.BlogInfo.TB_BLOG_INFO;
 
 	/**
 	 * 评论信息表
 	 */
-	public static final TbCommentInfo TB_COMMENT_INFO = org.yanlz.blog.db.tables.TbCommentInfo.TB_COMMENT_INFO;
+	public static final CommentInfo TB_COMMENT_INFO = org.yanlz.blog.db.tables.CommentInfo.TB_COMMENT_INFO;
 
 	/**
 	 * 用户基本信息表
 	 */
-	public static final TbUserInfo TB_USER_INFO = org.yanlz.blog.db.tables.TbUserInfo.TB_USER_INFO;
+	public static final UserInfo TB_USER_INFO = org.yanlz.blog.db.tables.UserInfo.TB_USER_INFO;
 }

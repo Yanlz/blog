@@ -12,10 +12,10 @@ import javax.annotation.Generated;
 
 import org.jooq.Table;
 import org.jooq.impl.SchemaImpl;
-import org.yanlz.blog.db.tables.TbAccount;
-import org.yanlz.blog.db.tables.TbBlogInfo;
-import org.yanlz.blog.db.tables.TbCommentInfo;
-import org.yanlz.blog.db.tables.TbUserInfo;
+import org.yanlz.blog.db.tables.Account;
+import org.yanlz.blog.db.tables.BlogInfo;
+import org.yanlz.blog.db.tables.CommentInfo;
+import org.yanlz.blog.db.tables.UserInfo;
 
 
 /**
@@ -31,7 +31,7 @@ import org.yanlz.blog.db.tables.TbUserInfo;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Blog extends SchemaImpl {
 
-	private static final long serialVersionUID = 365196502;
+	private static final long serialVersionUID = -1258904334;
 
 	/**
 	 * The reference instance of <code>blog</code>
@@ -54,9 +54,9 @@ public class Blog extends SchemaImpl {
 
 	private final List<Table<?>> getTables0() {
 		return Arrays.<Table<?>>asList(
-			TbAccount.TB_ACCOUNT,
-			TbBlogInfo.TB_BLOG_INFO,
-			TbCommentInfo.TB_COMMENT_INFO,
-			TbUserInfo.TB_USER_INFO);
+			Account.TB_ACCOUNT,
+			BlogInfo.TB_BLOG_INFO,
+			CommentInfo.TB_COMMENT_INFO,
+			UserInfo.TB_USER_INFO);
 	}
 }

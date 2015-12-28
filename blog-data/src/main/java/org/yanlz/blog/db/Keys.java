@@ -10,14 +10,14 @@ import org.jooq.Identity;
 import org.jooq.UniqueKey;
 import org.jooq.impl.AbstractKeys;
 import org.jooq.types.ULong;
-import org.yanlz.blog.db.tables.TbAccount;
-import org.yanlz.blog.db.tables.TbBlogInfo;
-import org.yanlz.blog.db.tables.TbCommentInfo;
-import org.yanlz.blog.db.tables.TbUserInfo;
-import org.yanlz.blog.db.tables.records.TbAccountRecord;
-import org.yanlz.blog.db.tables.records.TbBlogInfoRecord;
-import org.yanlz.blog.db.tables.records.TbCommentInfoRecord;
-import org.yanlz.blog.db.tables.records.TbUserInfoRecord;
+import org.yanlz.blog.db.tables.Account;
+import org.yanlz.blog.db.tables.BlogInfo;
+import org.yanlz.blog.db.tables.CommentInfo;
+import org.yanlz.blog.db.tables.UserInfo;
+import org.yanlz.blog.db.tables.records.AccountRecord;
+import org.yanlz.blog.db.tables.records.BlogInfoRecord;
+import org.yanlz.blog.db.tables.records.CommentInfoRecord;
+import org.yanlz.blog.db.tables.records.UserInfoRecord;
 
 
 /**
@@ -38,19 +38,19 @@ public class Keys {
 	// IDENTITY definitions
 	// -------------------------------------------------------------------------
 
-	public static final Identity<TbAccountRecord, ULong> IDENTITY_TB_ACCOUNT = Identities0.IDENTITY_TB_ACCOUNT;
-	public static final Identity<TbBlogInfoRecord, ULong> IDENTITY_TB_BLOG_INFO = Identities0.IDENTITY_TB_BLOG_INFO;
-	public static final Identity<TbCommentInfoRecord, ULong> IDENTITY_TB_COMMENT_INFO = Identities0.IDENTITY_TB_COMMENT_INFO;
-	public static final Identity<TbUserInfoRecord, ULong> IDENTITY_TB_USER_INFO = Identities0.IDENTITY_TB_USER_INFO;
+	public static final Identity<AccountRecord, ULong> IDENTITY_TB_ACCOUNT = Identities0.IDENTITY_TB_ACCOUNT;
+	public static final Identity<BlogInfoRecord, ULong> IDENTITY_TB_BLOG_INFO = Identities0.IDENTITY_TB_BLOG_INFO;
+	public static final Identity<CommentInfoRecord, ULong> IDENTITY_TB_COMMENT_INFO = Identities0.IDENTITY_TB_COMMENT_INFO;
+	public static final Identity<UserInfoRecord, ULong> IDENTITY_TB_USER_INFO = Identities0.IDENTITY_TB_USER_INFO;
 
 	// -------------------------------------------------------------------------
 	// UNIQUE and PRIMARY KEY definitions
 	// -------------------------------------------------------------------------
 
-	public static final UniqueKey<TbAccountRecord> KEY_TB_ACCOUNT_PRIMARY = UniqueKeys0.KEY_TB_ACCOUNT_PRIMARY;
-	public static final UniqueKey<TbBlogInfoRecord> KEY_TB_BLOG_INFO_PRIMARY = UniqueKeys0.KEY_TB_BLOG_INFO_PRIMARY;
-	public static final UniqueKey<TbCommentInfoRecord> KEY_TB_COMMENT_INFO_PRIMARY = UniqueKeys0.KEY_TB_COMMENT_INFO_PRIMARY;
-	public static final UniqueKey<TbUserInfoRecord> KEY_TB_USER_INFO_PRIMARY = UniqueKeys0.KEY_TB_USER_INFO_PRIMARY;
+	public static final UniqueKey<AccountRecord> KEY_TB_ACCOUNT_PRIMARY = UniqueKeys0.KEY_TB_ACCOUNT_PRIMARY;
+	public static final UniqueKey<BlogInfoRecord> KEY_TB_BLOG_INFO_PRIMARY = UniqueKeys0.KEY_TB_BLOG_INFO_PRIMARY;
+	public static final UniqueKey<CommentInfoRecord> KEY_TB_COMMENT_INFO_PRIMARY = UniqueKeys0.KEY_TB_COMMENT_INFO_PRIMARY;
+	public static final UniqueKey<UserInfoRecord> KEY_TB_USER_INFO_PRIMARY = UniqueKeys0.KEY_TB_USER_INFO_PRIMARY;
 
 	// -------------------------------------------------------------------------
 	// FOREIGN KEY definitions
@@ -62,16 +62,16 @@ public class Keys {
 	// -------------------------------------------------------------------------
 
 	private static class Identities0 extends AbstractKeys {
-		public static Identity<TbAccountRecord, ULong> IDENTITY_TB_ACCOUNT = createIdentity(TbAccount.TB_ACCOUNT, TbAccount.TB_ACCOUNT.ID);
-		public static Identity<TbBlogInfoRecord, ULong> IDENTITY_TB_BLOG_INFO = createIdentity(TbBlogInfo.TB_BLOG_INFO, TbBlogInfo.TB_BLOG_INFO.BLOG_ID);
-		public static Identity<TbCommentInfoRecord, ULong> IDENTITY_TB_COMMENT_INFO = createIdentity(TbCommentInfo.TB_COMMENT_INFO, TbCommentInfo.TB_COMMENT_INFO.COMMENT_ID);
-		public static Identity<TbUserInfoRecord, ULong> IDENTITY_TB_USER_INFO = createIdentity(TbUserInfo.TB_USER_INFO, TbUserInfo.TB_USER_INFO.USER_ID);
+		public static Identity<AccountRecord, ULong> IDENTITY_TB_ACCOUNT = createIdentity(Account.TB_ACCOUNT, Account.TB_ACCOUNT.ID);
+		public static Identity<BlogInfoRecord, ULong> IDENTITY_TB_BLOG_INFO = createIdentity(BlogInfo.TB_BLOG_INFO, BlogInfo.TB_BLOG_INFO.BLOG_ID);
+		public static Identity<CommentInfoRecord, ULong> IDENTITY_TB_COMMENT_INFO = createIdentity(CommentInfo.TB_COMMENT_INFO, CommentInfo.TB_COMMENT_INFO.COMMENT_ID);
+		public static Identity<UserInfoRecord, ULong> IDENTITY_TB_USER_INFO = createIdentity(UserInfo.TB_USER_INFO, UserInfo.TB_USER_INFO.USER_ID);
 	}
 
 	private static class UniqueKeys0 extends AbstractKeys {
-		public static final UniqueKey<TbAccountRecord> KEY_TB_ACCOUNT_PRIMARY = createUniqueKey(TbAccount.TB_ACCOUNT, TbAccount.TB_ACCOUNT.ID);
-		public static final UniqueKey<TbBlogInfoRecord> KEY_TB_BLOG_INFO_PRIMARY = createUniqueKey(TbBlogInfo.TB_BLOG_INFO, TbBlogInfo.TB_BLOG_INFO.BLOG_ID);
-		public static final UniqueKey<TbCommentInfoRecord> KEY_TB_COMMENT_INFO_PRIMARY = createUniqueKey(TbCommentInfo.TB_COMMENT_INFO, TbCommentInfo.TB_COMMENT_INFO.COMMENT_ID);
-		public static final UniqueKey<TbUserInfoRecord> KEY_TB_USER_INFO_PRIMARY = createUniqueKey(TbUserInfo.TB_USER_INFO, TbUserInfo.TB_USER_INFO.USER_ID);
+		public static final UniqueKey<AccountRecord> KEY_TB_ACCOUNT_PRIMARY = createUniqueKey(Account.TB_ACCOUNT, Account.TB_ACCOUNT.ID);
+		public static final UniqueKey<BlogInfoRecord> KEY_TB_BLOG_INFO_PRIMARY = createUniqueKey(BlogInfo.TB_BLOG_INFO, BlogInfo.TB_BLOG_INFO.BLOG_ID);
+		public static final UniqueKey<CommentInfoRecord> KEY_TB_COMMENT_INFO_PRIMARY = createUniqueKey(CommentInfo.TB_COMMENT_INFO, CommentInfo.TB_COMMENT_INFO.COMMENT_ID);
+		public static final UniqueKey<UserInfoRecord> KEY_TB_USER_INFO_PRIMARY = createUniqueKey(UserInfo.TB_USER_INFO, UserInfo.TB_USER_INFO.USER_ID);
 	}
 }

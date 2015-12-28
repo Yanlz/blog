@@ -17,24 +17,23 @@
         <dependency>
             <groupId>org.jooq</groupId>
             <artifactId>jooq</artifactId>
-            <version>3.7.1</version>
         </dependency>
         <dependency>
             <groupId>org.jooq</groupId>
             <artifactId>jooq-meta</artifactId>
-            <version>3.7.1</version>
         </dependency>
         <dependency>
             <groupId>org.jooq</groupId>
             <artifactId>jooq-codegen</artifactId>
-            <version>3.7.1</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.36</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.yanlz</groupId>
+            <artifactId>blog-jooq-extra</artifactId>
+        </dependency>
     </dependencies>
     <profiles>
         <profile>
@@ -60,6 +59,9 @@
                                         <password>ylzlovewly579</password>
                                     </jdbc>
                                     <generator>
+                                        <strategy>
+                                            <name>org.yanlz.blog.jooq.extra.GeneratorStrategy</name>
+                                        </strategy>
                                         <database>
                                             <name>org.jooq.util.mysql.MySQLDatabase</name>
                                             <includes>.*</includes>

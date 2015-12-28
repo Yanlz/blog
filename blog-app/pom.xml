@@ -9,9 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.yanlz</groupId>
     <artifactId>blog-app</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     
