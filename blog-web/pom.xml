@@ -10,5 +10,24 @@
     </parent>
     <artifactId>blog-web</artifactId>
     <packaging>jar</packaging>
-    
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.yanlz</groupId>
+            <artifactId>blog-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.yanlz</groupId>
+            <artifactId>blog-api</artifactId>
+        </dependency>
+    </dependencies>
 </project>
